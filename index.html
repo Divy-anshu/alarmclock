@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alarm Clock</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="clock-container">
+          <div class="clock" id="clock">00:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="alarm-form">
+          <form class="form-inline">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <label for="hour" class="sr-only">Hour:</label>
+                <input type="number" class="form-control" id="hour" min="1" max="12" placeholder="HH">
+              </span>
+              <span class="input-group-addon">
+                <label for="minute" class="sr-only">Minute:</label>
+                <input type="number" class="form-control" id="minute" min="0" max="59" placeholder="MM">
+              </span>
+              <span class="input-group-addon">
+                <label for="second" class="sr-only">Second:</label>
+                <input type="number" class="form-control" id="second" min="0" max="59" placeholder="SS">
+              </span>
+              <span class="input-group-addon">
+                <label for="ampm" class="sr-only">AM/PM:</label>
+                <select class="form-control" id="ampm">
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
+              </span>
+            </div>
+            <button type="button" class="btn btn-primary" id="setAlarm">Set Alarm</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="alarm-list" id="alarmList">
+          <h2>Alarms</h2>
+          <ul class="list-group" id="alarms"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Designed by Divyanshu
+  </div>
+
+  <!-- Add Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
